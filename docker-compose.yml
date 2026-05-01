@@ -1,0 +1,17 @@
+services:
+  mindflow-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    pull_policy: always
+    image: yashchauhan008/mindflow-backend:latest
+    platform: linux/amd64
+    container_name: mindflow-backend
+    env_file:
+      - ./.env.prod
+    ports:
+      - '3010:3010'
+    command: >
+      sh -c "dbmate up && npm run start"
+
+
