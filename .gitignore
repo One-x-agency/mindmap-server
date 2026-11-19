@@ -13,3 +13,8 @@ node_modules
 /tmp
 /files
 
+
+# Added by Auto-Setup
+dist/
+build/
+
